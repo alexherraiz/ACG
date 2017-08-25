@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
+import { AlertModule } from 'ngx-bootstrap';
+
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -21,6 +23,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    AlertModule.forRoot(),
     RouterModule.forRoot(
       appRoutes, { enableTracing: true }
     )
