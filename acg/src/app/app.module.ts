@@ -1,10 +1,13 @@
 import { BrowserModule, Title } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, EventEmitter } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AlertModule } from 'ngx-bootstrap';
+import { HttpModule }      from '@angular/http';
+import { GlobalLangService } from './globallang.service';
+
 
 
 const appRoutes: Routes = [
@@ -23,13 +26,14 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     AlertModule.forRoot(),
     RouterModule.forRoot(
       appRoutes, { enableTracing: true }
     )
 
   ],
-  providers: [Title],
+  providers: [Title, GlobalLangService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,22 +1,38 @@
-.mainContainer {
-  margin: auto;
-  border: 1px solid #000;
-
+.appHead {
+  top: 0;
+  position: absolute;
+  width: 100%;
+  background-color: #FFF;
+  height: 30%;
+  max-height: 150px;
 }
 
-.navBar {
-  width: 100%;
+.mainContainer {
+  margin: auto;
+  margin-top: 150px;
+  background-color: #fff;
+  box-shadow: 10px 10px 5px #888888;
+  display: block;
+  height: 100%;
 
-  .navBtn {
-    width: 20%;
-    float: left;
-    margin: auto;
-    text-align: center;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    border-left: 1px solid #888;
-    &:first-child{
-      border-left: none !important;
+  .navBar {
+    width: 100%;
+
+    .navBtn {
+      width: 20%;
+      float: left;
+      margin: auto;
+      text-align: center;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      border-left: 1px solid #888;
+      &:first-child{
+        border-left: none !important;
+      }
     }
+  }
+
+  .componentContainer {
+    height: 100%;
   }
 }

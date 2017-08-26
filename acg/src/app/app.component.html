@@ -1,15 +1,17 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>American Cleaning Group</h1>
 
+<div class='appHead' style="text-align:center">
+    <h1>American Cleaning Group</h1>
 </div>
-<div class='container mainContainer .col-md-6'>
-  <div class='navBar'>
-    <div class='navBtn'><a routerLink="/home" routerLinkActive="active">Home</a></div>
-    <div class='navBtn'><a routerLink="/home" routerLinkActive="active">Services</a></div>
-    <div class='navBtn'><a routerLink="/home" routerLinkActive="active">Pricing</a></div>
-    <div class='navBtn'><a routerLink="/home" routerLinkActive="active">Contact</a></div>
-    <div class='navBtn'><a routerLink="/home" routerLinkActive="active">About us</a></div>
+
+  <div class='h-100 container mainContainer fill .col-md-6'>
+    <div class='navBar'>
+      <div class='navBtn'><a routerLink="/home" routerLinkActive="active">Home</a></div>
+      <div class='navBtn'><a routerLink="/home" routerLinkActive="active">Services</a></div>
+      <div class='navBtn'><a routerLink="/home" routerLinkActive="active">Pricing</a></div>
+      <div class='navBtn'><a routerLink="/home" routerLinkActive="active">Contact</a></div>
+      <div class='navBtn'><a routerLink="/home" routerLinkActive="active">About us</a></div>
+    </div>
+    <div class='componentContainer'>
+      <router-outlet></router-outlet>
+    </div>
   </div>
-  <router-outlet></router-outlet>
-</div>
