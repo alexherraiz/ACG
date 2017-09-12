@@ -1,15 +1,14 @@
 
 <div class='appHead' style="text-align:center">
-    <h1>American Cleaning Group</h1>
 </div>
 
   <div class='h-100 container mainContainer fill .col-md-6'>
     <div class='navBar'>
-      <div class='navBtn'><a routerLink="/home" routerLinkActive="active">Home</a></div>
-      <div class='navBtn'><a routerLink="/services" routerLinkActive="active">Services</a></div>
-      <div class='navBtn'><a routerLink="/home" routerLinkActive="active">Pricing</a></div>
-      <div class='navBtn'><a routerLink="/home" routerLinkActive="active">Contact</a></div>
-      <div class='navBtn'><a routerLink="/home" routerLinkActive="active">About us</a></div>
+      <div class='navBtn'><a [innerHTML]="this.lang.app_homeTitle" routerLink="/home" routerLinkActive="active"></a></div>
+      <div class='navBtn'><a [innerHTML]="this.lang.app_servicesTitle" routerLink="/services" routerLinkActive="active"></a></div>
+      <div class='navBtn'><a [innerHTML]="this.lang.app_pricingTitle" routerLink="/home" routerLinkActive="active"></a></div>
+      <div class='navBtn'><a [innerHTML]="this.lang.app_contactTitle" routerLink="/home" routerLinkActive="active"></a></div>
+      <div class='navBtn'><a [innerHTML]="this.lang.app_aboutTitle" routerLink="/home" routerLinkActive="active"></a></div>
     </div>
     <div class='componentContainer'>
       <router-outlet></router-outlet>
