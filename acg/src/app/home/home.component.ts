@@ -26,9 +26,7 @@ export class HomeComponent implements OnInit{
     this.es_tokens = (<any>es_tokens);
     this.lang = this.langService.getLang() == 'en' ? this.en_tokens : this.es_tokens;
   }
-  langUpdated(lang: string){
-    this.lang = lang == 'en' ? this.en_tokens : this.es_tokens;
-  }
+
 
   ngOnInit() {
     this.titleService.setTitle( "Home" );

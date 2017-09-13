@@ -1,17 +1,70 @@
 .appHead {
-  top: 0;
+  top: 60px;
   position: absolute;
   width: 100%;
   background-color: #FFF;
   height: 30%;
   max-height: 150px;
+  background-repeat: no-repeat;
+
+  background-position: center;
+  background-image: url("../assets/flag-wave.gif");
+}
+.topItems {
+  position: absolute;
+  top:0px;
+  left: 0px;
+  width: 100%;
+  height: 60px;
+  background-color: #FFF;
+
+
+  .sloganImage{
+    float: left;
+    width: 484px;
+    height: 60px;
+    background-repeat: no-repeat;
+  }
+
+  .langSwitch{
+    float: right;
+    display: flex;
+    font-size: 20px;
+
+    span{
+      padding: 5px;
+    }
+
+    .slider{
+      background-color: #2196F3;
+    }
+    input:checked + .slider {
+      background-color: #FF2222;
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px #FF2222;
+    }
+
+    .enLabel.activeLabel{
+      color: #2196F3;
+      font-weight: bolder;
+    }
+
+    .esLabel.activeLabel{
+      color: #FF2222;
+      font-weight: bolder;
+    }
+
+
+  }
 }
 
 .mainContainer {
   margin: auto;
-  margin-top: 150px;
+  margin-top: 230px;
   background-color: #fff;
-  box-shadow: 10px 10px 5px #888888;
+  box-shadow: 5px 5px 10px #666;
   display: block;
   height: 100%;
 

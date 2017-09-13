@@ -1,16 +1,28 @@
 
-<div class='appHead' style="text-align:center">
+<div class='topItems'>
+  <img class='sloganImage' src="../assets/slogan.gif">
+  <div class='langSwitch'>
+    <span class='enLabel' [class.activeLabel]='currLang == "en"'> English </span>
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider round" (click)='toggleLanguage()'></span>
+    </label>
+    <span  class='esLabel' [class.activeLabel]='currLang == "es"'> Español </span>
+  </div>
 </div>
 
-  <div class='h-100 container mainContainer fill .col-md-6'>
-    <div class='navBar'>
-      <div class='navBtn'><a [innerHTML]="this.lang.app_homeTitle" routerLink="/home" routerLinkActive="active"></a></div>
-      <div class='navBtn'><a [innerHTML]="this.lang.app_servicesTitle" routerLink="/services" routerLinkActive="active"></a></div>
-      <div class='navBtn'><a [innerHTML]="this.lang.app_pricingTitle" routerLink="/home" routerLinkActive="active"></a></div>
-      <div class='navBtn'><a [innerHTML]="this.lang.app_contactTitle" routerLink="/home" routerLinkActive="active"></a></div>
-      <div class='navBtn'><a [innerHTML]="this.lang.app_aboutTitle" routerLink="/home" routerLinkActive="active"></a></div>
-    </div>
-    <div class='componentContainer'>
-      <router-outlet></router-outlet>
-    </div>
+<div class='appHead' style="text-align:center"></div>
+
+
+<div class='h-100 container mainContainer fill .col-md-6'>
+  <div class='navBar'>
+    <div class='navBtn'><a [innerHTML]="this.lang.app_homeTitle" routerLink="/home" routerLinkActive="active"></a></div>
+    <div class='navBtn'><a [innerHTML]="this.lang.app_servicesTitle" routerLink="/services" routerLinkActive="active"></a></div>
+    <div class='navBtn'><a [innerHTML]="this.lang.app_pricingTitle" routerLink="/home" routerLinkActive="active"></a></div>
+    <div class='navBtn'><a [innerHTML]="this.lang.app_contactTitle" routerLink="/home" routerLinkActive="active"></a></div>
+    <div class='navBtn'><a [innerHTML]="this.lang.app_aboutTitle" routerLink="/home" routerLinkActive="active"></a></div>
   </div>
+  <div class='componentContainer'>
+    <router-outlet></router-outlet>
+  </div>
+</div>
