@@ -1,3 +1,13 @@
 <div class='ServiceComponent'>
-  <p [innerHTML]="this.lang.exhaust_description"></p>
+  <p-accordion>
+      <p-accordionTab header="{{this.lang.serv_exhaustTitle}}">
+        <p [innerHTML]="this.lang.serv_exhaustDescription"></p>
+      </p-accordionTab>
+      <p-accordionTab header="{{this.lang.serv_filterTitle}}">
+        <p [innerHTML]="this.lang.serv_filterDescription"></p>
+      </p-accordionTab>
+      <p-accordionTab header="{{this.lang.serv_trapTitle}}">
+        <p [innerHTML]="this.lang.serv_trapDescription"></p>
+      </p-accordionTab>
+  </p-accordion>
 </div>

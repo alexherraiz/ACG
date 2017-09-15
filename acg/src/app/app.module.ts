@@ -1,4 +1,5 @@
 import { BrowserModule, Title } from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule, EventEmitter } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -8,6 +9,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { AlertModule } from 'ngx-bootstrap';
 import { HttpModule }      from '@angular/http';
 import { GlobalLangService } from './globallang.service';
+import {AccordionModule} from 'primeng/primeng';
+import { AngularFontAwesomeModule } from 'angular-font-awesome/angular-font-awesome';
+
 
 
 
@@ -29,6 +33,9 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    AngularFontAwesomeModule,
+    BrowserAnimationsModule,
+    AccordionModule,
     HttpModule,
     AlertModule.forRoot(),
     RouterModule.forRoot(

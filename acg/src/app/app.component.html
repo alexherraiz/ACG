@@ -1,28 +1,35 @@
 
-<div class='topItems'>
-  <img class='sloganImage' src="../assets/slogan.gif">
-  <div class='langSwitch'>
-    <span class='enLabel' [class.activeLabel]='currLang == "en"'> English </span>
-    <label class="switch">
-      <input type="checkbox">
-      <span class="slider round" (click)='toggleLanguage()'></span>
-    </label>
-    <span  class='esLabel' [class.activeLabel]='currLang == "es"'> Español </span>
+<nav class="navbar navbar-default navbar-fixed-top" role='navigation'>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <!-- <img class='sloganImage' src="../assets/slogan.gif"> -->
+      </a>
+
+    </div>
+
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav nav-pills">
+        <li role="presentation" [class.active]='this.route.url == "/home"' class="active">  <a [innerHTML]="this.lang.app_homeTitle" routerLink="/home" routerLinkActive="active"></a></li>
+        <li role="presentation" [class.active]='this.route.url == "/services"'><a [innerHTML]="this.lang.app_servicesTitle" routerLink="/services" routerLinkActive="active"></a></li>
+        <li role="presentation"><a [innerHTML]="this.lang.app_pricingTitle" routerLink="/home" routerLinkActive="active"></a></li>
+        <li role="presentation"><a [innerHTML]="this.lang.app_contactTitle" routerLink="/home" routerLinkActive="active"></a></li>
+        <li role="presentation"><a [innerHTML]="this.lang.app_aboutTitle" routerLink="/home" routerLinkActive="active"></a></li>
+        <li class='nav navbar-nav navbar-right langSwitch' >
+          <ul >
+            <li class='enLabel btn btn-primary' [class.active]='currLang == "en"' (click)='toggleLanguage()'> English </li>
+            <li class='esLabel btn btn-primary' [class.active]='currLang == "es"' (click)='toggleLanguage()'> Español </li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
   </div>
-</div>
+</nav>
 
-<div class='appHead' style="text-align:center"></div>
-
-
-<div class='h-100 container mainContainer fill .col-md-6'>
-  <div class='navBar'>
-    <div class='navBtn'><a [innerHTML]="this.lang.app_homeTitle" routerLink="/home" routerLinkActive="active"></a></div>
-    <div class='navBtn'><a [innerHTML]="this.lang.app_servicesTitle" routerLink="/services" routerLinkActive="active"></a></div>
-    <div class='navBtn'><a [innerHTML]="this.lang.app_pricingTitle" routerLink="/home" routerLinkActive="active"></a></div>
-    <div class='navBtn'><a [innerHTML]="this.lang.app_contactTitle" routerLink="/home" routerLinkActive="active"></a></div>
-    <div class='navBtn'><a [innerHTML]="this.lang.app_aboutTitle" routerLink="/home" routerLinkActive="active"></a></div>
-  </div>
+<div class='h-100 container mainContainer .col-md-6'>
   <div class='componentContainer'>
     <router-outlet></router-outlet>
   </div>
 </div>
+<div class='footer'>American Cleaning Services Group Inc. © 2010</div>

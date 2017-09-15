@@ -7,6 +7,8 @@ import 'rxjs/add/operator/map';
 import * as en_tokens from '../../assets/en_service.json';
 import * as es_tokens from '../../assets/es_service.json';
 import { GlobalLangService } from '../globallang.service';
+import {AccordionModule} from 'primeng/primeng';
+
 
 
 @Component({

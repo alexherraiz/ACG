@@ -3,6 +3,7 @@ import { GlobalLangService } from './globallang.service';
 import {Http, Response} from '@angular/http';
 import { Title }     from '@angular/platform-browser';
 import { Observable } from 'rxjs/Observable';
+import { Router } from '@angular/router';
 import 'rxjs/add/operator/map';
 
 import * as en_tokens from '../assets/en_app.json';
@@ -20,7 +21,7 @@ export class AppComponent implements OnInit{
   es_tokens;
   currLang;
   lang;
-  public constructor(private titleService: Title, private http:Http, private langService: GlobalLangService ) {
+  public constructor(private route:Router, private titleService: Title, private http:Http, private langService: GlobalLangService ) {
     this.en_tokens = (<any>en_tokens);
     this.es_tokens = (<any>es_tokens);
     if( this.langService.getLang() == 'en' ){
