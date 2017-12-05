@@ -4,7 +4,7 @@ import { NgModule, EventEmitter } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { ServiceComponent } from './service/service.component';
+import { GreaseFilterComponent } from './greasefilter/greasefilter.component';
 import { RouterModule, Routes } from '@angular/router';
 import { AlertModule } from 'ngx-bootstrap';
 import { HttpModule }      from '@angular/http';
@@ -17,7 +17,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome/angular-font-awes
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'services', component: ServiceComponent },
+  { path: 'greasefilter', component: GreaseFilterComponent },
   { path: '',
     redirectTo: '/home',
     pathMatch: 'full'
@@ -29,7 +29,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     HomeComponent,
-    ServiceComponent
+    GreaseFilterComponent
   ],
   imports: [
     BrowserModule,

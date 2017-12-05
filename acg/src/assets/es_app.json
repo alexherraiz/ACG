@@ -1,6 +1,9 @@
 {
   "app_homeTitle" : "Inicio",
   "app_servicesTitle" : "Servicios",
+  "app_filterTitle" : "Filtro de grasa",
+  "app_trapTitle" : "Trampa de grasa",
+  "app_exhaustTitle" : "sistemas de escape",
   "app_pricingTitle" : "Clientes",
   "app_contactTitle" : "Contáctenos",
   "app_aboutTitle" : "Nuestra Compañía"

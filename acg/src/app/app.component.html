@@ -8,10 +8,16 @@
 
     </div>
 
-    <div class="collapse navbar-collapse">
-      <ul class="nav navbar-nav nav-pills">
+    <div class="collapse navbar-collapse container-fluid">
+      <ul class="nav navbar-nav navbar-left nav-pills">
         <li role="presentation" [class.active]='this.route.url == "/home"' class="active">  <a [innerHTML]="this.lang.app_homeTitle" routerLink="/home" routerLinkActive="active"></a></li>
-        <li role="presentation" [class.active]='this.route.url == "/services"'><a [innerHTML]="this.lang.app_servicesTitle" routerLink="/services" routerLinkActive="active"></a></li>
+        <li class='serviceDropdown' role="presentation"><a [innerHTML]="this.lang.app_servicesTitle"></a>
+          <ul>
+            <li role="presentation" [class.active]='this.route.url == "/greasefilter"'><a [innerHTML]="this.lang.app_filterTitle" routerLink="/greasefilter" routerLinkActive="active"></a></li>
+            <li role="presentation" [class.active]='this.route.url == "/services"'><a [innerHTML]="this.lang.app_trapTitle" routerLink="/services" routerLinkActive="active"></a></li>
+            <li role="presentation" [class.active]='this.route.url == "/services"'><a [innerHTML]="this.lang.app_exhaustTitle" routerLink="/services" routerLinkActive="active"></a></li>
+          </ul>
+        </li>
         <li role="presentation"><a [innerHTML]="this.lang.app_pricingTitle" routerLink="/home" routerLinkActive="active"></a></li>
         <li role="presentation"><a [innerHTML]="this.lang.app_contactTitle" routerLink="/home" routerLinkActive="active"></a></li>
         <li role="presentation"><a [innerHTML]="this.lang.app_aboutTitle" routerLink="/home" routerLinkActive="active"></a></li>
