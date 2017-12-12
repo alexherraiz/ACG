@@ -12,11 +12,11 @@
       <ul class="nav navbar-nav navbar-left nav-pills">
         <li role="presentation" [class.active]='this.route.url == "/home"' class="active">  <a [innerHTML]="this.lang.app_homeTitle" routerLink="/home" routerLinkActive="active"></a></li>
         <li class='serviceDropdown' role="presentation"><a [innerHTML]="this.lang.app_servicesTitle"></a>
-          <ul>
-            <li role="presentation" [class.active]='this.route.url == "/greasefilter"'><a [innerHTML]="this.lang.app_filterTitle" routerLink="/greasefilter" routerLinkActive="active"></a></li>
-            <li role="presentation" [class.active]='this.route.url == "/services"'><a [innerHTML]="this.lang.app_trapTitle" routerLink="/services" routerLinkActive="active"></a></li>
-            <li role="presentation" [class.active]='this.route.url == "/services"'><a [innerHTML]="this.lang.app_exhaustTitle" routerLink="/services" routerLinkActive="active"></a></li>
-          </ul>
+          <div>
+            <a role="presentation" class='serviceItem' [innerHTML]="this.lang.app_filterTitle" routerLink="/greasefilter" routerLinkActive="active"></a>
+            <a role="presentation" class='serviceItem' [innerHTML]="this.lang.app_trapTitle" routerLink="/services" routerLinkActive="active"></a>
+            <a role="presentation" class='serviceItem' [innerHTML]="this.lang.app_exhaustTitle" routerLink="/services" routerLinkActive="active"></a>
+          </div>
         </li>
         <li role="presentation"><a [innerHTML]="this.lang.app_pricingTitle" routerLink="/home" routerLinkActive="active"></a></li>
         <li role="presentation"><a [innerHTML]="this.lang.app_contactTitle" routerLink="/home" routerLinkActive="active"></a></li>
